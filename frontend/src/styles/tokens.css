@@ -1,0 +1,65 @@
+:root {
+  --bg-void: #04060c;
+  --bg-base: #070b13;
+  --surface-1: #0a101c;
+  --surface-2: #0d1524;
+  --surface-3: #111c30;
+  --surface-raised: #152238;
+
+  --line-1: rgba(148, 163, 184, 0.1);
+  --line-2: rgba(148, 163, 184, 0.18);
+  --line-3: rgba(148, 163, 184, 0.3);
+
+  --text-1: #e9eff9;
+  --text-2: #a5b6cc;
+  --text-3: #6f829b;
+
+  --cyan: #3ad4ef;
+  --cyan-dim: rgba(58, 212, 239, 0.14);
+  --ice: #8fc7f4;
+  --ice-dim: rgba(143, 199, 244, 0.12);
+  --violet: #a78bfa;
+  --violet-dim: rgba(167, 139, 250, 0.14);
+  --emerald: #34d39a;
+  --emerald-dim: rgba(52, 211, 154, 0.13);
+  --amber: #f0b445;
+  --amber-dim: rgba(240, 180, 69, 0.13);
+  --red: #f16f7f;
+  --red-dim: rgba(241, 111, 127, 0.13);
+
+  --st-idle: #6f829b;
+  --st-completed: #34d39a;
+  --st-blocked: #f0b445;
+  --st-failed: #f16f7f;
+  --st-unavailable: #56657c;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 48px;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 18px;
+
+  --shadow-1: 0 1px 2px rgba(2, 6, 16, 0.5);
+  --shadow-2: 0 10px 30px rgba(2, 6, 16, 0.45);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 420ms;
+
+  --sidebar-w: 244px;
+  --topbar-h: 58px;
+}

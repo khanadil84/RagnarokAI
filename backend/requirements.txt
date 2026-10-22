@@ -1,0 +1,7 @@
+# Ragnarok AI backend — direct runtime dependencies, pinned to the exact
+# versions verified in backend/.venv on Python 3.14.3.
+# Transitive dependencies (starlette, h11, click, …) resolve automatically.
+# Install:  pip install -r backend/requirements.txt
+fastapi==0.151.0
+pydantic==2.14.1
+uvicorn==0.54.0

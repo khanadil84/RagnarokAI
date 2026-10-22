@@ -1,0 +1,246 @@
+.topology-wrap {
+  position: relative;
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+}
+
+.topology-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.topo-caption {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 0 var(--sp-5) var(--sp-4);
+  font-size: 11.5px;
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+
+.topo-legend {
+  display: flex;
+  gap: var(--sp-4);
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.legend-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.stage-chip {
+  cursor: pointer;
+}
+
+.stage-chip .chip-body,
+.node-card .node-body {
+  transition: fill var(--dur-2) var(--ease), stroke var(--dur-2) var(--ease),
+    opacity var(--dur-2) var(--ease);
+}
+
+.stage-chip:hover .chip-body,
+.node-card:hover .node-body {
+  stroke: var(--line-3);
+}
+
+.stage-chip.pending {
+  opacity: 0.34;
+}
+
+.node-card.pending {
+  opacity: 0.42;
+}
+
+.stage-chip .chip-label {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  fill: var(--text-2);
+  text-transform: uppercase;
+}
+
+.stage-chip.is-completed .chip-label {
+  fill: var(--text-1);
+}
+
+.stage-chip .chip-index {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  fill: var(--text-3);
+  letter-spacing: 0.06em;
+}
+
+.stage-chip .chip-status {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stage-chip.selected .chip-body {
+  stroke-width: 1.6;
+}
+
+.flow-line {
+  stroke: var(--line-1);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.flow-line.done {
+  stroke: rgba(58, 212, 239, 0.5);
+}
+
+.flow-chevron {
+  fill: var(--text-3);
+  opacity: 0.55;
+}
+
+.flow-chevron.done {
+  fill: var(--cyan);
+  opacity: 0.9;
+}
+
+.flow-dash {
+  stroke: var(--cyan);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 5 9;
+  opacity: 0.85;
+  animation: flow-dash 900ms linear infinite;
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.owner-link {
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  fill: none;
+  opacity: 0.3;
+}
+
+.owner-link.active {
+  opacity: 0.85;
+  stroke-dasharray: none;
+}
+
+.pulse-ring {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 1;
+  opacity: 0.55;
+  animation: pulse-ring 1.6s var(--ease) infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.98); opacity: 0.55; }
+  70% { transform: scale(1.06); opacity: 0; }
+  100% { transform: scale(1.06); opacity: 0; }
+}
+
+.node-name {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 650;
+  fill: var(--text-1);
+  letter-spacing: 0.01em;
+}
+
+.node-role {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  fill: var(--text-3);
+}
+
+.node-state {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.node-card .node-body {
+  fill: var(--surface-2);
+  stroke: var(--line-2);
+  stroke-width: 1;
+}
+
+.node-card.is-gate .node-body {
+  fill: rgba(13, 21, 36, 0.7);
+  stroke-dasharray: 4 4;
+}
+
+.node-card.selected .node-body {
+  stroke-width: 1.6;
+}
+
+.topo-detail {
+  margin: 0 var(--sp-5) var(--sp-5);
+  border: 1px solid var(--line-1);
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+  padding: var(--sp-4) var(--sp-5);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: var(--sp-5);
+}
+
+@media (max-width: 1000px) {
+  .topo-detail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.topo-detail-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 13.5px;
+  font-weight: 650;
+}
+
+.topo-detail-body {
+  font-size: 12.5px;
+  color: var(--text-2);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+.topo-detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11.5px;
+}
+
+.topo-detail-meta .k {
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 9.5px;
+  font-weight: 700;
+}

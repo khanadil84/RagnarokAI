@@ -1,0 +1,8 @@
+# Ragnarok AI backend — test/development dependencies.
+# Includes the runtime set via -r, then only what the test suite needs:
+#   pytest  — test runner (backend/tests)
+#   httpx   — transport for fastapi.testclient.TestClient (starlette TestClient)
+# Install:  pip install -r backend/requirements-dev.txt
+-r requirements.txt
+httpx==0.28.1
+pytest==9.1.1
